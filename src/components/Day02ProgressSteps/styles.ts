@@ -46,6 +46,7 @@ export const Circle = styled.div<CircleProps>`
     background: white;
     border-radius: 50%;
     border: 1px solid orange;
+    transition: background-color 0.3s 0.3s;
 
     ${isActive && circlesModifiers.isActive()}
   `}
