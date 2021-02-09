@@ -28,6 +28,24 @@ export const Content = styled.div<Props>`
     img {
       max-width: 100%;
     }
+
+    h1 {
+      font-size: 2.6rem;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    & div small {
+      font-size: 1rem;
+    }
+
+    & div p {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+    }
   `}
 `;
 
@@ -72,10 +90,42 @@ export const CircleContainer = styled.div<Props>`
   `}
 `;
 
-export const Navigation = styled.nav`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  color: #fff;
+const navModifiers = {
+  activeMenu: () => css`
+    opacity: 1;
+    transform: translateX(0);
+  `,
+};
+
+export const Navigation = styled.nav<Props>`
+  ${({ activeMenu }) => css`
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 10;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(-3rem);
+    transition: all 0.3s linear 0.2s;
+
+    ${activeMenu && navModifiers.activeMenu()}
+
+    ul {
+      list-style: none;
+      font-size: 2rem;
+
+      li {
+        margin-bottom: 1rem;
+        cursor: pointer;
+      }
+
+      li + li {
+        margin-left: 1.5rem;
+      }
+
+      li + li + li {
+        margin-left: 3rem;
+      }
+    }
+  `}
 `;

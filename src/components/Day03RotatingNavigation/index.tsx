@@ -65,11 +65,11 @@ const Day03RotatingNavigation = ({ activeMenu = false }: Props) => {
             </p>
           </div>
         </S.Content>
-        <S.Navigation>
+        <S.Navigation activeMenu={isOpen}>
           <ul>
-            <li>Teste</li>
-            <li>Teste</li>
-            <li>Teste</li>
+            <li>Home</li>
+            <li>Email</li>
+            <li>Articles</li>
           </ul>
         </S.Navigation>
       </S.Wrapper>
