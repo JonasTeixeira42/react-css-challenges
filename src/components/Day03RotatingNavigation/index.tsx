@@ -60,8 +60,8 @@ const Day03RotatingNavigation = ({ activeMenu = false }: Props) => {
               Minus id minima doloribus dolorum fugit deserunt qui vero
               voluptas, ut quia cum amet temporibus veniam ad ea ab
               perspiciatis, enim accusamus asperiores explicabo provident.
-              Voluptates sint, neque fuga cum illum, tempore autem maxime
-              similique laborum odio, magnam esse. Aperiam?
+              Voluptates sint, fuga cum illum, tempore autem maxime similique
+              laborum odio, magnam esse. Aperiam?
             </p>
           </div>
         </S.Content>
